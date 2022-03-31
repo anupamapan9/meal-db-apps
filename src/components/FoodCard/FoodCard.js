@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const FoodCard = ({ food }) => {
-    console.log(food)
     const { strMealThumb, strTags, strMeal, idMeal } = food;
     return (
         <div className='bg-white bg-opacity-75 rounded-2xl shadow-xl p-3'>
