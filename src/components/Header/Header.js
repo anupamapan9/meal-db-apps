@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import CustomeLink from '../CustomeLinks/CustomeLink';
 
 const Header = () => {
