@@ -6,8 +6,8 @@ const FoodCard = ({ food }) => {
         <div className='bg-white bg-opacity-75 rounded-2xl shadow-xl p-3'>
             <Link to={`/food-details/${idMeal}`}>
                 <img src={strMealThumb} alt="" />
-                <h2 className='text-2xl text-gray-600'>{strMeal}</h2>
-                <p><small> {strTags ? strTags : 'Not Found'}</small></p>
+                <h2 className='text-2xl text-gray-600'>Name: {strMeal}</h2>
+                <p><small> Tag: {strTags ? strTags : 'Not Found'}</small></p>
             </Link>
         </div>
     );

@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
-const useFood = () => {
+const useFood = (name = 's') => {
     const [foods, setFoods] = useState([])
+    const [spinner, setSpinner] = useState(false)
     useEffect(() => {
-        fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=fish')
+        setSpinner(true)
+        const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
+        fetch(url)
             .then(res => res.json())
-            .then(data => setFoods(data.meals))
-    }, [])
-    return [foods, setFoods]
+            .then(data => {
+                setFoods(data.meals)
+                setSpinner(false)
+            })
+    }, [name])
+    return [foods, setFoods, spinner]
 }
 export default useFood

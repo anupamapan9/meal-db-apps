@@ -3,7 +3,7 @@ import CustomeLink from '../CustomeLinks/CustomeLink';
 
 const Header = () => {
     return (
-        <nav className='flex items-center justify-around h-20 bg-amber-300'>
+        <nav className='flex items-center justify-around h-20 bg-amber-300 z-50'>
             <div className='hidden md:block'>
                 <h1 className='logo font-medium font-mono text-3xl'>Foodies</h1>
             </div>
@@ -11,6 +11,7 @@ const Header = () => {
 
                 <CustomeLink to='/'>Home</CustomeLink>
                 <CustomeLink to='/foods'>Foods</CustomeLink>
+                <CustomeLink to='/chicken'>Chicken</CustomeLink>
                 <CustomeLink to='/search'>Search</CustomeLink>
                 <CustomeLink to='/about'>About</CustomeLink>
 
